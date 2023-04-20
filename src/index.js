@@ -13,7 +13,7 @@ root.render(
             <Routes>
                 {newMap.map((route, index) => (
                     <Route
-                        key={index}
+                        key={`route-list-${index}`}
                         path={route.path}
                         element={route.element}
                     />

@@ -4,7 +4,7 @@ import { Home } from "./home";
 export { Header } from "./Header";
 export { Footer } from "./Footer";
 
-export const map = [
+export const newMap = [
     {
         path: "/",
         element: <Home />,

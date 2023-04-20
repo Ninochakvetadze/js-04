@@ -2,13 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./css/index.css";
-
+import { newMap } from "./pages";
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>{/* The rest of your app goes here */}</BrowserRouter>
+        <BrowserRouter>
+            <Routes>
+                {newMap.map((route, index) => (
+                    <Route
+                        key={index}
+                        path={route.path}
+                        element={route.element}
+                    />
+                ))}
+            </Routes>
+        </BrowserRouter>
     </React.StrictMode>
 );
 

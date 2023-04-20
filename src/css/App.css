@@ -1,0 +1,17 @@
+.red {
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.blue {
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+    margin-left: 15px;
+}

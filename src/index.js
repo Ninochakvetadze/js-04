@@ -8,8 +8,8 @@ import { newMap, Header, Footer } from "./pages";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <Header />
         <BrowserRouter>
+            <Header />
             <Routes>
                 {newMap.map((route, index) => (
                     <Route
@@ -19,8 +19,8 @@ root.render(
                     />
                 ))}
             </Routes>
+            <Footer />
         </BrowserRouter>
-        <Footer />
     </React.StrictMode>
 );
 

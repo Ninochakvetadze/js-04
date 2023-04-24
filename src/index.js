@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./css/index.css";
+import "./css/index.scss";
 import { newMap, Header, Footer } from "./pages";
 // import reportWebVitals from './reportWebVitals';
 

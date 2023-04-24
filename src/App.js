@@ -1,5 +1,6 @@
-import "./css/App.css";
+import "./css/App.scss";
 import { Header, Footer } from "./pages";
+
 
 function ButtonComponent(props) {
     const { name, customClassName } = props;

@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./css/index.scss";
-import { newMap, Header, Footer } from "./pages";
+import { Header, Footer } from "./pages";
+import { routesMap } from "./services";
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -11,7 +12,7 @@ root.render(
         <BrowserRouter>
             <Header />
             <Routes>
-                {newMap.map((route, index) => (
+                {routesMap.map((route, index) => (
                     <Route
                         key={`route-list-${index}`}
                         path={route.path}

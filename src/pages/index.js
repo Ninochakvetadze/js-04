@@ -1,20 +1,6 @@
-import { About } from "./about";
-import { Contact } from "./contact";
-import { Home } from "./home";
+import { Form } from "react-router-dom";
 export { Header } from "./Header";
 export { Footer } from "./Footer";
-
-export const newMap = [
-    {
-        path: "/",
-        element: <Home />,
-    },
-    {
-        path: "about",
-        element: <About />,
-    },
-    {
-        path: "contact",
-        element: <Contact />,
-    },
-];
+export {Home} from './home';
+export {About} from './about';
+export {Contact} from './contact';

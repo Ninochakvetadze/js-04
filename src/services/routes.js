@@ -1,5 +1,5 @@
-import {About, Home, Contact} from './pages';
-export const routesMap = [
+import { About, Home, Contact } from "./pages";
+const routesMap = [
     {
         path: "/",
         element: <Home />,
@@ -13,3 +13,5 @@ export const routesMap = [
         element: <Contact />,
     },
 ];
+
+export default routesMap;

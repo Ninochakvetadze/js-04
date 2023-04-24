@@ -1,20 +1,19 @@
-import { Link } from "react-router-dom";
-export function Header() {
+import { PageLink } from "src/globalComponents";
+export function Nav() {
+    const links = [
+        { to: "/", name: "Home" },
+        { to: "/about", name: "About" },
+        { to: "/contact", name: "Contact" },
+    ];
     return (
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
+        <nav>
+            <ul>
+                {links.map((link, index) => (
+                    <li key={index}>
+                        <PageLink to={link.to} name={link.name} />
                     </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+                ))}
+            </ul>
+        </nav>
     );
 }

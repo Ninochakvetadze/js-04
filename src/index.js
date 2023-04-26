@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./css/index.scss";
@@ -13,11 +13,16 @@ root.render(
             <Header />
             <Routes>
                 {routesMap.map((route, index) => (
-                    <Route
-                        key={`route-list-${index}`}
-                        path={route.path}
-                        element={route.element}
-                    />
+                    <Suspense
+                        key={"suspense-list-${index}"}
+                        fallback={<div>Loading...</div>}
+                    >
+                        <Route
+                            key={`route-list-${index}`}
+                            path={route.path}
+                            element={route.element}
+                        />
+                    </Suspense>
                 ))}
             </Routes>
             <Footer />

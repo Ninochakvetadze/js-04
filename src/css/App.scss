@@ -15,4 +15,12 @@
     text-align: center;
     margin-left: 15px;
 }
-
+#products {
+    div {
+        border: 2px solid slateblue;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}

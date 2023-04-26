@@ -1,4 +1,4 @@
-import { About, Home, Contact } from "../pages";
+import { About, Home, Contact, Products } from "../pages";
 const routesMap = [
     {
         path: "/",
@@ -11,6 +11,10 @@ const routesMap = [
     {
         path: "contact",
         element: <Contact />,
+    },
+    {
+        path: "products",
+        element: <Products />,
     },
 ];
 

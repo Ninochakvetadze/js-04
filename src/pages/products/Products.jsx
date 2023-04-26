@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
+import { Loader } from "globalComponents";
 import { _get } from "services";
 export function Products() {
     const [products, setProducts] = useState([]);
@@ -17,14 +19,18 @@ export function Products() {
         <div>
             <h1>Products</h1>
             <div id="products">
-                {products.map((product, index) => (
-                    <div key={index}>
-                        <img src={product.image} alt={product.title} />
-                        <h2>{product.title}</h2>
-                        {/* <a>{product.description}</a> */}
-                        <a>{product.price}</a>
-                    </div>
-                ))}
+                {products.length > 0 ? (
+                    products.map((product, index) => (
+                        <div key={index}>
+                            <img src={product.image} alt={product.title} />
+                            <h2>{product.title}</h2>
+                            {/* <a>{product.description}</a> */}
+                            <a>{product.price}</a>
+                        </div>
+                    ))
+                ) : (
+                    <Loader />
+                )}
             </div>
         </div>
     );

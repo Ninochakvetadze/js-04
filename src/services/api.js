@@ -1,6 +1,5 @@
 import axios from "axios";
 axios.create();
-
 export function _get(url, params) {
     return axios.get(url);
 }

@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Loader } from "../../globalComponents";
 import { _get } from "../../services";
 export function Products() {
     const [products, setProducts] = useState([]);
     useEffect(() => {
+        console.log(products);
         async function fetchData() {
-            const apiData = await axios.get(
-                "https://fakestoreapi.com/products"
-            );
+            const apiData = await _get("https://fakestoreapi.com/products");
             if (apiData.status === 200) {
                 console.log(apiData.data);
                 setProducts(apiData.data);
             }
         }
+        fetchData();
     }, []);
     return (
         <div>
@@ -25,7 +24,7 @@ export function Products() {
                             <img src={product.image} alt={product.title} />
                             <h2>{product.title}</h2>
                             {/* <a>{product.description}</a> */}
-                            <a>{product.price}</a>
+                            <span>{product.price}</span>
                         </div>
                     ))
                 ) : (

@@ -1,5 +1,5 @@
 import { About, Home, Contact, Products } from "../pages";
-const routesMap = [
+export const routesMap = [
     {
         path: "/",
         element: <Home />,
@@ -17,5 +17,3 @@ const routesMap = [
         element: <Products />,
     },
 ];
-
-export default routesMap;

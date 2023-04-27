@@ -12,13 +12,13 @@ root.render(
         <LanguageProvider>
             <Header />
             <Routes>
-                {routesMap.map((route, index) => (
+                {routesMap.map((route, index) => {
                     <Route
-                        key={"route-list-${index}"}
+                        key={`route-list-${index}`}
                         path={route.path}
                         element={route.element}
-                    />
-                ))}
+                    />;
+                })}
             </Routes>
             <Footer />
         </LanguageProvider>

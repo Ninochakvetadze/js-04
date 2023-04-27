@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Loader } from "globalComponents";
-import { _get } from "services";
+import { Loader } from "../../globalComponents";
+import { _get } from "../../services";
 export function Products() {
     const [products, setProducts] = useState([]);
     useEffect(() => {
@@ -10,7 +10,7 @@ export function Products() {
                 "https://fakestoreapi.com/products"
             );
             if (apiData.status === 200) {
-                console.log(api.data);
+                console.log(apiData.data);
                 setProducts(apiData.data);
             }
         }

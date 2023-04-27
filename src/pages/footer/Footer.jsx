@@ -1,4 +1,4 @@
-import { PageLink } from "../../../globalComponents";
+import { PageLink } from "../../globalComponents";
 
 export function Footer() {
     const links = [

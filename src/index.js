@@ -4,30 +4,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./css/index.scss";
 import { Header, Footer } from "./pages";
 import { routesMap } from "./services";
-// import reportWebVitals from './reportWebVitals';
+import { LanguageProvider } from "./services/contexts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
+    <BrowserRouter>
+        <LanguageProvider>
             <Header />
             <Routes>
                 {routesMap.map((route, index) => (
-                    <Suspense
-                        key={"suspense-list-${index}"}
-                        fallback={<div>Loading...</div>}
-                    >
-                        <Route
-                            key={`route-list-${index}`}
-                            path={route.path}
-                            element={route.element}
-                        />
-                    </Suspense>
+                    <Route
+                        key={"route-list-${index}"}
+                        path={route.path}
+                        element={route.element}
+                    />
                 ))}
             </Routes>
             <Footer />
-        </BrowserRouter>
-    </React.StrictMode>
+        </LanguageProvider>
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
